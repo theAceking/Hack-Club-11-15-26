@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://co0iha4a6qdi3"]
+
+[ext_resource type="Texture2D" uid="uid://deqm73o1ummov" path="res://spritesheetsanic.png" id="1_sxcao"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14gns"]
+atlas = ExtResource("1_sxcao")
+region = Rect2(200, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wo0vl"]
+atlas = ExtResource("1_sxcao")
+region = Rect2(400, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drno8"]
+atlas = ExtResource("1_sxcao")
+region = Rect2(600, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2jjb"]
+atlas = ExtResource("1_sxcao")
+region = Rect2(800, 200, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4qi3b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14gns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wo0vl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drno8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2jjb")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1843316277]
+
+[node name="hedgey1" type="CharacterBody2D" parent="." unique_id=1670177672]
+
+[node name="hegdeyanim" type="AnimatedSprite2D" parent="hedgey1" unique_id=1167866485]
+sprite_frames = SubResource("SpriteFrames_4qi3b")
+frame_progress = 0.20375288
