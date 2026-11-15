@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bqoao1orqkuy7" path="res://hedgie.gd" id="1_p1mv1"]
 [ext_resource type="Texture2D" uid="uid://c5nhupw7sgkt" path="res://sonk.png" id="2_8dqro"]
 [ext_resource type="Texture2D" uid="uid://d3uu5rttbypr2" path="res://ball.png" id="3_0q4wf"]
+[ext_resource type="Texture2D" uid="uid://brvn3hklgpxgq" path="res://1.png" id="4_8dqro"]
 
 [sub_resource type="GDScript" id="GDScript_epypp"]
 script/source = "extends Area2D
@@ -19,10 +20,88 @@ radius = 7.5
 [sub_resource type="CircleShape2D" id="CircleShape2D_p1mv1"]
 radius = 26.002138
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_0q4wf"]
+atlas = ExtResource("4_8dqro")
+region = Rect2(200, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mddj8"]
+atlas = ExtResource("4_8dqro")
+region = Rect2(400, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0q14e"]
+atlas = ExtResource("4_8dqro")
+region = Rect2(600, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kt8q"]
+atlas = ExtResource("4_8dqro")
+region = Rect2(800, 200, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tr3fu"]
+animations = [{
+"frames": [{
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_0q4wf")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_mddj8")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_0q14e")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_3kt8q")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dqro"]
+atlas = ExtResource("4_8dqro")
+region = Rect2(200, 400, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6v0a4"]
+atlas = ExtResource("4_8dqro")
+region = Rect2(400, 400, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqi7p"]
+atlas = ExtResource("4_8dqro")
+region = Rect2(600, 400, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b57sv"]
+atlas = ExtResource("4_8dqro")
+region = Rect2(800, 400, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_snc6v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dqro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6v0a4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqi7p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b57sv")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 20.0
+}]
+
 [node name="Hedgie" type="CharacterBody2D" unique_id=1520152085]
 script = ExtResource("1_p1mv1")
 
-[node name="Sonc" type="Sprite2D" parent="." unique_id=878733166]
+[node name="frfvsgrrwg" type="Sprite2D" parent="." unique_id=878733166]
+visible = false
 z_index = 69
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_8dqro")
@@ -36,7 +115,8 @@ position = Vector2(16, 7)
 scale = Vector2(12, 12)
 shape = SubResource("CircleShape2D_0hol4")
 
-[node name="Ball" type="Sprite2D" parent="." unique_id=990204984]
+[node name="dddd" type="Sprite2D" parent="." unique_id=990204984]
+visible = false
 position = Vector2(20, 20)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_0q4wf")
@@ -57,6 +137,17 @@ theme_override_font_sizes/font_size = 48
 text = "10
 "
 horizontal_alignment = 1
+
+[node name="Sonc" type="AnimatedSprite2D" parent="." unique_id=880323041]
+sprite_frames = SubResource("SpriteFrames_tr3fu")
+animation = &"new_animation"
+autoplay = "default"
+
+[node name="Ball" type="AnimatedSprite2D" parent="." unique_id=1400218911]
+visible = false
+sprite_frames = SubResource("SpriteFrames_snc6v")
+autoplay = "default"
+frame_progress = 0.5537647
 
 [connection signal="area_entered" from="PickupArea" to="." method="_on_pickup_area_area_entered"]
 [connection signal="area_entered" from="HurtboxArea" to="." method="_on_hurtbox_area_area_entered"]

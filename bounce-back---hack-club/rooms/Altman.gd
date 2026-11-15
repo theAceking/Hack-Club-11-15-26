@@ -1,16 +1,19 @@
 extends CharacterBody2D
 
+var health_label
 var player
 var rb
 var angle = 0
 var impulseangle = 0
-var vel = 1200
+@export var vel = 1200
+@export var imp = -1800
 var bouncing = false
 @export var health: int = 3
 
 func _ready() -> void:
 	player = get_node("../Hedgie")
 	print(player)
+	health_label = get_node("Health")
 
 
 func _process(delta: float) -> void:
@@ -21,17 +24,16 @@ func _process(delta: float) -> void:
 	var ydis = playerPos.y - clankerPos.y
 	angle = atan2(ydis, xdis)
 	rotation = angle
+	health_label.text = str(health)
 	if(health <= 0):
 		queue_free()
 		
 func _physics_process(delta: float) -> void:
 	if not bouncing:
-		vel = 1200
 		velocity = Vector2(vel*cos(angle), vel*sin(angle))
 		move_and_slide()
 	else:
-		vel = -1800
-		velocity = Vector2(vel*cos(impulseangle), vel*sin(impulseangle))
+		velocity = Vector2(imp*cos(impulseangle), imp*sin(impulseangle))
 		move_and_slide()
 
 func _on_area_2d_area_entered(area: Area2D) -> void:

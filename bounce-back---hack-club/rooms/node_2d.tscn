@@ -19,8 +19,9 @@ position = Vector2(620, 200)
 position = Vector2(417, 478)
 
 [node name="Door" parent="." unique_id=15218995 instance=ExtResource("4_jutfx")]
-position = Vector2(1125, 333.00003)
+position = Vector2(1127, 335)
 scene = ExtResource("5_twb3s")
+thingy = "hello???"
 
 [node name="Label" type="Label" parent="." unique_id=1585435433]
 offset_left = 745.0

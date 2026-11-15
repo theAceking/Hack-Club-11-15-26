@@ -8,7 +8,7 @@ var hp = 10
 
 var parry_cd = 2
 var parrying = false
-var parry_time
+var parry_time = 0
 var vel = 670
 
 func _ready():
@@ -17,13 +17,19 @@ func _ready():
 	health_label = get_node("Health")
 	sonc_sprite.visible = true
 	ball_sprite.visible = false
-	parry_time = Time.get_ticks_msec()
 
 
 func _physics_process(delta):
 		var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 		velocity = input_direction * vel
 		move_and_slide()
+
+func _process(delta):
+	var dir = Input.get_axis("ui_left", "ui_right")
+	if dir > 0: #right
+		sonc_sprite.flip_h = true
+	if dir < 0:
+		sonc_sprite.flip_h = false
 
 func _on_pickup_area_area_entered(area: Area2D) -> void:
 	print("aeuhiuqegiueqghiueqg")
@@ -55,6 +61,7 @@ func _on_hurtbox_area_area_entered(area: Area2D) -> void:
 		if parrying:
 			print('lollllz')
 			area.get_parent().health -= 1
+			parry_time = 0
 			print(area.get_parent().health)
 		else:
 			Playerstats.health -= 1
