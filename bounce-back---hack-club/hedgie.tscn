@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://c2chliql0cfxg"]
+
+[ext_resource type="Script" uid="uid://bqoao1orqkuy7" path="res://hedgie.gd" id="1_p1mv1"]
+[ext_resource type="Texture2D" uid="uid://c5nhupw7sgkt" path="res://sonk.png" id="2_8dqro"]
+[ext_resource type="Texture2D" uid="uid://d3uu5rttbypr2" path="res://ball.png" id="3_0q4wf"]
+
+[sub_resource type="GDScript" id="GDScript_epypp"]
+script/source = "extends Area2D
+
+func _on_pickup_area_area_entered(area):
+	print(\"hehehahhaha\")
+	if area.is_in_group(\"Ram\"):
+		area.queue_free()
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0hol4"]
+radius = 7.5
+
+[node name="Hedgie" type="CharacterBody2D" unique_id=1520152085]
+script = ExtResource("1_p1mv1")
+
+[node name="Sonc" type="Sprite2D" parent="." unique_id=878733166]
+z_index = 69
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_8dqro")
+
+[node name="PickupArea" type="Area2D" parent="." unique_id=1535509518]
+position = Vector2(0, -1)
+script = SubResource("GDScript_epypp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" unique_id=1383231688]
+position = Vector2(16, 7)
+scale = Vector2(12, 12)
+shape = SubResource("CircleShape2D_0hol4")
+
+[node name="Ball" type="Sprite2D" parent="." unique_id=990204984]
+position = Vector2(20, 20)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_0q4wf")
+
+[connection signal="area_entered" from="PickupArea" to="." method="_on_pickup_area_area_entered"]
