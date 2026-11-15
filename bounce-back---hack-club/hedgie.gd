@@ -31,14 +31,14 @@ func _unhandled_input(event):
 	if event is InputEventKey:
 		if event.pressed and event.is_action("parry"):
 			var time_now = Time.get_ticks_msec()
-			if time_now - parry_time < 1000:
+			if time_now - parry_time < 600:
 				return
 			print("deez")
 			parrying = true
 			parry_time = Time.get_ticks_msec()
 			sonc_sprite.visible = false
 			ball_sprite.visible = true
-			await get_tree().create_timer(0.5).timeout
+			await get_tree().create_timer(0.2).timeout
 			parrying = true
 			sonc_sprite.visible = true
 			ball_sprite.visible = false

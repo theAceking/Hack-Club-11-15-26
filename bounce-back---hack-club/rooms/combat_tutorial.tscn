@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c2chliql0cfxg" path="res://hedgie.tscn" id="4_hh2kq"]
 [ext_resource type="PackedScene" uid="uid://dpydnptscms0t" path="res://rooms/node_2d.tscn" id="4_njq7y"]
 [ext_resource type="PackedScene" uid="uid://cmpnkssy5eh56" path="res://ram.tscn" id="5_bifwb"]
+[ext_resource type="PackedScene" uid="uid://otk4vghcdxbl" path="res://altman.tscn" id="5_njq7y"]
 
 [node name="Node2D" type="Node2D" unique_id=1815103793]
 
@@ -16,3 +17,10 @@ position = Vector2(187, 312)
 [node name="Door" parent="." unique_id=15218995 instance=ExtResource("3_uc15m")]
 position = Vector2(20, 316.00003)
 scene = ExtResource("4_njq7y")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=383138323]
+position = Vector2(570, 333)
+scale = Vector2(0.3, 0.3)
+
+[node name="Altman" parent="." unique_id=1636913377 instance=ExtResource("5_njq7y")]
+position = Vector2(1593, 315)
