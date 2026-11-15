@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cj75ab7poeqqs"]
+
+[ext_resource type="PackedScene" uid="uid://c00ayut031qcp" path="res://door.tscn" id="3_uc15m"]
+[ext_resource type="PackedScene" uid="uid://c2chliql0cfxg" path="res://hedgie.tscn" id="4_hh2kq"]
+[ext_resource type="PackedScene" uid="uid://dpydnptscms0t" path="res://rooms/node_2d.tscn" id="4_njq7y"]
+[ext_resource type="PackedScene" uid="uid://cmpnkssy5eh56" path="res://ram.tscn" id="5_bifwb"]
+
+[node name="Node2D" type="Node2D" unique_id=1815103793]
+
+[node name="Ram" parent="." unique_id=2102116185 instance=ExtResource("5_bifwb")]
+position = Vector2(991, 317)
+
+[node name="Hedgie" parent="." unique_id=1520152085 instance=ExtResource("4_hh2kq")]
+position = Vector2(187, 312)
+
+[node name="Door" parent="." unique_id=15218995 instance=ExtResource("3_uc15m")]
+position = Vector2(20, 316.00003)
+scene = ExtResource("4_njq7y")
