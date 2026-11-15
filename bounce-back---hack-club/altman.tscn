@@ -3,13 +3,19 @@
 [ext_resource type="Script" uid="uid://b2gfaycrt7ia5" path="res://rooms/Altman.gd" id="1_lexwf"]
 [ext_resource type="Texture2D" uid="uid://cf4xf045vy7ys" path="res://sonc.png" id="2_7xpeg"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bifwb"]
+
 [node name="Altman" type="CharacterBody2D" unique_id=1636913377]
 scale = Vector2(0.3, 0.3)
 script = ExtResource("1_lexwf")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=2039473161]
+[node name="Area2D" type="Area2D" parent="." unique_id=2039473161 groups=["Altman"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=100046392]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=100046392 groups=["Altman"]]
+scale = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_bifwb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=369594357]
 texture = ExtResource("2_7xpeg")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -16,6 +16,9 @@ func _on_pickup_area_area_entered(area):
 [sub_resource type="CircleShape2D" id="CircleShape2D_0hol4"]
 radius = 7.5
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_p1mv1"]
+radius = 26.002138
+
 [node name="Hedgie" type="CharacterBody2D" unique_id=1520152085]
 script = ExtResource("1_p1mv1")
 
@@ -38,4 +41,22 @@ position = Vector2(20, 20)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_0q4wf")
 
+[node name="HurtboxArea" type="Area2D" parent="." unique_id=953240350 groups=["Sonc"]]
+position = Vector2(21, 12)
+scale = Vector2(3, 3)
+
+[node name="Hurtbox" type="CollisionShape2D" parent="HurtboxArea" unique_id=863393196 groups=["Sonc"]]
+shape = SubResource("CircleShape2D_p1mv1")
+
+[node name="Health" type="Label" parent="." unique_id=581728066]
+offset_left = -20.0
+offset_top = -153.0
+offset_right = 35.0
+offset_bottom = -16.0
+theme_override_font_sizes/font_size = 48
+text = "10
+"
+horizontal_alignment = 1
+
 [connection signal="area_entered" from="PickupArea" to="." method="_on_pickup_area_area_entered"]
+[connection signal="area_entered" from="HurtboxArea" to="." method="_on_hurtbox_area_area_entered"]
