@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://8vaf8ywpkb7b"]
+
+[ext_resource type="Texture2D" uid="uid://dc3gfl6cs3rrb" path="res://assets/sprite sheet (3).png" id="1_dwegc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4dw4"]
+atlas = ExtResource("1_dwegc")
+region = Rect2(200, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnsv5"]
+atlas = ExtResource("1_dwegc")
+region = Rect2(400, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oc1kq"]
+atlas = ExtResource("1_dwegc")
+region = Rect2(600, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcaen"]
+atlas = ExtResource("1_dwegc")
+region = Rect2(800, 200, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4qi3b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4dw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnsv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oc1kq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcaen")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="shades" type="Node2D" unique_id=819233753]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1158780031]
+position = Vector2(-113, -168)
+sprite_frames = SubResource("SpriteFrames_4qi3b")
