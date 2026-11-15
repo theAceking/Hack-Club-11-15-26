@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cmpnkssy5eh56"]
+
+[ext_resource type="Texture2D" uid="uid://bc0iy131gkftr" path="res://ram.png" id="1_26crb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tr3fu"]
+
+[node name="Ram" type="Area2D" unique_id=2102116185 groups=["Ram"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=677204237]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_26crb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1489986687 groups=["Ram"]]
+scale = Vector2(8, 8)
+shape = SubResource("CircleShape2D_tr3fu")
