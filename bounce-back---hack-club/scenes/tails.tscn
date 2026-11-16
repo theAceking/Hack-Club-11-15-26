@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://d2vgjemqa8ias"]
+
+[ext_resource type="Texture2D" path="res://assets/sprite sheet (4).png" id="1_nifej"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mr0ka"]
+atlas = ExtResource("1_nifej")
+region = Rect2(200, 400, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hae8f"]
+atlas = ExtResource("1_nifej")
+region = Rect2(400, 400, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2omb"]
+atlas = ExtResource("1_nifej")
+region = Rect2(600, 400, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rc3ei"]
+atlas = ExtResource("1_nifej")
+region = Rect2(800, 400, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4qi3b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mr0ka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hae8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2omb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rc3ei")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Tails" type="Node2D" unique_id=1469860040]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=60111262]
+sprite_frames = SubResource("SpriteFrames_4qi3b")
+frame_progress = 0.5548671

@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://cpcc75klgcb5x"]
+
+[ext_resource type="Texture2D" uid="uid://deqm73o1ummov" path="res://spritesheetsanic.png" id="1_sxcao"]
+[ext_resource type="Texture2D" uid="uid://hgbflokan0gp" path="res://assets/sprite sheet.png" id="2_14gns"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14gns"]
+atlas = ExtResource("1_sxcao")
+region = Rect2(200, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wo0vl"]
+atlas = ExtResource("1_sxcao")
+region = Rect2(400, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drno8"]
+atlas = ExtResource("1_sxcao")
+region = Rect2(600, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2jjb"]
+atlas = ExtResource("1_sxcao")
+region = Rect2(800, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sa1o6"]
+atlas = ExtResource("2_14gns")
+region = Rect2(200, 400, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vu38d"]
+atlas = ExtResource("2_14gns")
+region = Rect2(800, 400, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k422w"]
+atlas = ExtResource("2_14gns")
+region = Rect2(400, 400, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjiod"]
+atlas = ExtResource("2_14gns")
+region = Rect2(600, 400, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4qi3b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14gns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wo0vl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drno8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2jjb")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sa1o6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vu38d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k422w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjiod")
+}],
+"loop": 1,
+"name": &"parry",
+"speed": 20.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1843316277]
+
+[node name="hedgey1" type="CharacterBody2D" parent="." unique_id=1670177672]
+
+[node name="hegdeyanim" type="AnimatedSprite2D" parent="hedgey1" unique_id=1167866485]
+position = Vector2(-156, -94)
+sprite_frames = SubResource("SpriteFrames_4qi3b")
+animation = &"parry"
+frame_progress = 0.4068068

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Bounce Back - Hack Club"
-run/main_scene="uid://dpydnptscms0t"
+run/main_scene="uid://dhv5lps0uues5"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
