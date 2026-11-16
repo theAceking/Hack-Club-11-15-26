@@ -26,6 +26,7 @@ func _physics_process(delta):
 
 func _process(delta):
 	var dir = Input.get_axis("ui_left", "ui_right")
+	health_label.text = str(Playerstats.health)
 	if dir > 0: #right
 		sonc_sprite.flip_h = true
 	if dir < 0:
@@ -37,6 +38,9 @@ func _on_pickup_area_area_entered(area: Area2D) -> void:
 		area.queue_free()
 	if area.is_in_group("Door"):
 		print("door time")
+	if area.is_in_group("Heal"):
+		Playerstats.health += 5
+		area.queue_free()
 		
 
 func _unhandled_input(event):

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cxjhli3l38kkt"]
+
+[ext_resource type="PackedScene" uid="uid://c00ayut031qcp" path="res://door.tscn" id="1_x4obk"]
+[ext_resource type="PackedScene" uid="uid://c2chliql0cfxg" path="res://hedgie.tscn" id="2_0xd5j"]
+[ext_resource type="PackedScene" uid="uid://df7e6mv7sbbji" path="res://rooms/tutorial.tscn" id="2_8svsa"]
+[ext_resource type="PackedScene" uid="uid://cmpnkssy5eh56" path="res://ram.tscn" id="3_w0skf"]
+
+[node name="Main" type="Node2D" unique_id=1597092461]
+
+[node name="Door" parent="." unique_id=15218995 instance=ExtResource("1_x4obk")]
+position = Vector2(1131, 289.00003)
+scene = ExtResource("2_8svsa")
+
+[node name="Door" parent="Door" unique_id=28436447 instance=ExtResource("1_x4obk")]
+position = Vector2(1131, 289.00003)
+
+[node name="Hedgie" parent="." unique_id=1520152085 instance=ExtResource("2_0xd5j")]
+position = Vector2(157, 268)
+
+[node name="Ram" parent="." unique_id=2102116185 instance=ExtResource("3_w0skf")]
+position = Vector2(719, 149)
+
+[node name="Ram2" parent="." unique_id=1884265577 instance=ExtResource("3_w0skf")]
+position = Vector2(874, 428)

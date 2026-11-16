@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ctwfdwh5ljch8"]
+
+[ext_resource type="Texture2D" uid="uid://d307y2su8yvfy" path="res://heart.png" id="1_1kxcp"]
+[ext_resource type="Script" uid="uid://ccscfvmauxv6c" path="res://rooms/heal.gd" id="1_bfsbx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0q4wf"]
+
+[node name="Heart" type="Area2D" unique_id=694583360 groups=["Heal"]]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_bfsbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=608037709 groups=["Heal"]]
+texture = ExtResource("1_1kxcp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1920398517 groups=["Heal"]]
+scale = Vector2(30, 30)
+shape = SubResource("CircleShape2D_0q4wf")

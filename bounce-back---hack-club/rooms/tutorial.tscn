@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://df7e6mv7sbbji"]
+
+[ext_resource type="PackedScene" uid="uid://c00ayut031qcp" path="res://door.tscn" id="1_0it0u"]
+[ext_resource type="PackedScene" uid="uid://ch5t7us8pdlhu" path="res://rooms/clobbers.tscn" id="2_32p10"]
+[ext_resource type="PackedScene" uid="uid://c2chliql0cfxg" path="res://hedgie.tscn" id="2_byner"]
+[ext_resource type="PackedScene" uid="uid://cmpnkssy5eh56" path="res://ram.tscn" id="3_32p10"]
+[ext_resource type="PackedScene" uid="uid://otk4vghcdxbl" path="res://altman.tscn" id="4_byner"]
+
+[node name="Main" type="Node2D" unique_id=1597092461]
+
+[node name="Door" parent="." unique_id=15218995 instance=ExtResource("1_0it0u")]
+position = Vector2(712, 7.000004)
+rotation = -1.5546594
+scene = ExtResource("2_32p10")
+
+[node name="Hedgie" parent="." unique_id=1520152085 instance=ExtResource("2_byner")]
+position = Vector2(157, 268)
+
+[node name="Ram" parent="." unique_id=2102116185 instance=ExtResource("3_32p10")]
+position = Vector2(915, 555)
+
+[node name="Altman" parent="." unique_id=1636913377 instance=ExtResource("4_byner")]
+position = Vector2(1223, 278)

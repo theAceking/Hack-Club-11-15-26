@@ -11,7 +11,12 @@ script/source = "extends Area2D
 func _on_pickup_area_area_entered(area):
 	print(\"hehehahhaha\")
 	if area.is_in_group(\"Ram\"):
+		area.queue_free()	
+	if area.is_in_group(\"Heal\"):
+		Playerstats.health += 5
 		area.queue_free()
+		
+	
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0hol4"]
@@ -144,7 +149,6 @@ animation = &"new_animation"
 autoplay = "default"
 
 [node name="Ball" type="AnimatedSprite2D" parent="." unique_id=1400218911]
-visible = false
 sprite_frames = SubResource("SpriteFrames_snc6v")
 autoplay = "default"
 frame_progress = 0.04860192

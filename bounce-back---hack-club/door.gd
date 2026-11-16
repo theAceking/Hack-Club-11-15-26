@@ -14,9 +14,6 @@ func _ready() -> void:
 		#next_scene = preload("res://rooms/node_2d.tscn")
 	#if thingy == "shredder":
 		#next_scene = preload("res://rooms/shredder.tscn")
-	#
-	print(scene)
-	_next_room()
 	pass
 
 func _next_room():

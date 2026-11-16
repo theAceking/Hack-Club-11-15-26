@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dqwlsgq611ogh"]
+
+[ext_resource type="PackedScene" uid="uid://c00ayut031qcp" path="res://door.tscn" id="1_4ll2g"]
+[ext_resource type="PackedScene" uid="uid://ckqlcycti08ep" path="res://rooms/heart.tscn" id="2_jj6fm"]
+[ext_resource type="PackedScene" uid="uid://c2chliql0cfxg" path="res://hedgie.tscn" id="3_fnagb"]
+[ext_resource type="PackedScene" uid="uid://cmpnkssy5eh56" path="res://ram.tscn" id="4_bfdpn"]
+[ext_resource type="PackedScene" uid="uid://otk4vghcdxbl" path="res://altman.tscn" id="5_q3btv"]
+
+[node name="Main" type="Node2D" unique_id=1597092461]
+
+[node name="Door" parent="." unique_id=15218995 instance=ExtResource("1_4ll2g")]
+position = Vector2(1065, 78)
+rotation = -0.88427556
+scene = ExtResource("2_jj6fm")
+
+[node name="Hedgie" parent="." unique_id=1520152085 instance=ExtResource("3_fnagb")]
+position = Vector2(129, 510)
+
+[node name="Ram" parent="." unique_id=2102116185 instance=ExtResource("4_bfdpn")]
+position = Vector2(658, 279)
+
+[node name="Altman" parent="." unique_id=1636913377 instance=ExtResource("5_q3btv")]
+position = Vector2(1264, 286)
+vel = 700
+
+[node name="Altman2" parent="." unique_id=1948013782 instance=ExtResource("5_q3btv")]
+position = Vector2(114, -132)
+vel = 700
