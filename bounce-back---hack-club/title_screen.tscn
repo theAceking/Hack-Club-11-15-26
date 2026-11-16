@@ -99,7 +99,7 @@ offset_top = 340.0
 offset_right = 431.0
 offset_bottom = 440.0
 texture_normal = ExtResource("6_8vmu4")
-texture_pressed = ExtResource("7_xfn3p")
+texture_pressed = ExtResource("6_8vmu4")
 texture_hover = ExtResource("7_xfn3p")
 
 [node name="QuitButton" type="TextureButton" parent="Background" unique_id=1733127047]
@@ -109,7 +109,7 @@ offset_top = 482.0
 offset_right = 435.0
 offset_bottom = 582.0
 texture_normal = ExtResource("8_rhgbh")
-texture_pressed = ExtResource("9_skmiq")
+texture_pressed = ExtResource("8_rhgbh")
 texture_hover = ExtResource("9_skmiq")
 
 [connection signal="pressed" from="Background/PlayButton" to="." method="_on_play_button_pressed"]
