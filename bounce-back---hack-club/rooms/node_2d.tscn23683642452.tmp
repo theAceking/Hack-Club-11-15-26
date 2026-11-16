@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dpydnptscms0t"]
+
+[ext_resource type="PackedScene" uid="uid://c2chliql0cfxg" path="res://hedgie.tscn" id="1_g0slo"]
+[ext_resource type="PackedScene" uid="uid://cmpnkssy5eh56" path="res://ram.tscn" id="3_0ymq7"]
+[ext_resource type="PackedScene" uid="uid://c00ayut031qcp" path="res://door.tscn" id="4_jutfx"]
+[ext_resource type="PackedScene" uid="uid://dip0hiqv34k25" path="res://rooms/arena.tscn" id="4_r1h7i"]
+
+[sub_resource type="SystemFont" id="SystemFont_jutfx"]
+
+[node name="Room1" type="Node2D" unique_id=255463405]
+
+[node name="Hedgie" parent="." unique_id=1520152085 instance=ExtResource("1_g0slo")]
+position = Vector2(90, 100)
+
+[node name="Ram" parent="." unique_id=2102116185 instance=ExtResource("3_0ymq7")]
+position = Vector2(620, 200)
+
+[node name="Ram2" parent="." unique_id=1980948682 instance=ExtResource("3_0ymq7")]
+position = Vector2(417, 478)
+
+[node name="Door" parent="." unique_id=15218995 instance=ExtResource("4_jutfx")]
+position = Vector2(1127, 335)
+scene = ExtResource("4_r1h7i")
+thingy = "tutorial"
+
+[node name="Label" type="Label" parent="." unique_id=1585435433]
+offset_left = 745.0
+offset_top = 557.0
+offset_right = 1112.0
+offset_bottom = 602.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_jutfx")
+theme_override_font_sizes/font_size = 32
+text = "use arrow keys to move"

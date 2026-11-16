@@ -147,7 +147,7 @@ autoplay = "default"
 visible = false
 sprite_frames = SubResource("SpriteFrames_snc6v")
 autoplay = "default"
-frame_progress = 0.5537647
+frame_progress = 0.04860192
 
 [connection signal="area_entered" from="PickupArea" to="." method="_on_pickup_area_area_entered"]
 [connection signal="area_entered" from="HurtboxArea" to="." method="_on_hurtbox_area_area_entered"]

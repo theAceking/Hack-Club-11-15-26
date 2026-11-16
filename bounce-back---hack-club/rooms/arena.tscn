@@ -5,9 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://c00ayut031qcp" path="res://door.tscn" id="3_b4awg"]
 [ext_resource type="PackedScene" uid="uid://dpydnptscms0t" path="res://rooms/node_2d.tscn" id="4_x7omx"]
 [ext_resource type="PackedScene" uid="uid://otk4vghcdxbl" path="res://altman.tscn" id="5_ietrs"]
-[ext_resource type="PackedScene" uid="uid://cj75ab7poeqqs" path="res://rooms/combat_tutorial.tscn" id="6_7yu17"]
 
-[sub_resource type="SystemFont" id="SystemFont_bifwb"]
+[sub_resource type="SystemFont" id="SystemFont_njq7y"]
 
 [node name="Combat Tutorial" type="Node2D" unique_id=1815103793]
 
@@ -18,9 +17,9 @@ position = Vector2(991, 317)
 position = Vector2(302, 304)
 
 [node name="Door" parent="." unique_id=15218995 instance=ExtResource("3_b4awg")]
-position = Vector2(20, 316.00003)
+position = Vector2(27, 316.00003)
 scene = ExtResource("4_x7omx")
-thingy = "ff"
+thingy = "tutorial"
 
 [node name="Altman" parent="." unique_id=1636913377 groups=["Altman"] instance=ExtResource("5_ietrs")]
 position = Vector2(1463, 50)
@@ -36,11 +35,6 @@ offset_top = 546.0
 offset_right = 1119.0
 offset_bottom = 591.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_bifwb")
+theme_override_fonts/font = SubResource("SystemFont_njq7y")
 theme_override_font_sizes/font_size = 32
 text = "successfully parrying resets the cooldown"
-
-[node name="Door2" parent="." unique_id=541985256 instance=ExtResource("3_b4awg")]
-position = Vector2(1160, 298.00003)
-scene = ExtResource("6_7yu17")
-thingy = "gggg"
