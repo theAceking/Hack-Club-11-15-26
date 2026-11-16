@@ -21,3 +21,4 @@ position = Vector2(915, 555)
 
 [node name="Altman" parent="." unique_id=1636913377 instance=ExtResource("4_byner")]
 position = Vector2(1223, 278)
+vel = 500

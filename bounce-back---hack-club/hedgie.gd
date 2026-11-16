@@ -35,6 +35,7 @@ func _process(delta):
 func _on_pickup_area_area_entered(area: Area2D) -> void:
 	print("aeuhiuqegiueqghiueqg")
 	if area.is_in_group("Ram"):
+		Playerstats.ram += 1
 		area.queue_free()
 	if area.is_in_group("Door"):
 		print("door time")

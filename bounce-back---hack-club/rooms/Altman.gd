@@ -10,6 +10,8 @@ var impulseangle = 0
 var bouncing = false
 @export var health: int = 3
 
+const ram = preload("res://ram.tscn")
+
 func _ready() -> void:
 	player = get_node("../Hedgie")
 	print(player)
@@ -26,6 +28,9 @@ func _process(delta: float) -> void:
 	rotation = angle
 	health_label.text = str(health)
 	if(health <= 0):
+		var r = ram.instantiate()
+		add_child(r)
+		r.reparent(get_parent())
 		queue_free()
 		
 func _physics_process(delta: float) -> void:

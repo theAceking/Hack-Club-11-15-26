@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://b3hn4c8td4hnu"]
+
+[ext_resource type="PackedScene" uid="uid://c00ayut031qcp" path="res://door.tscn" id="1_jt8kx"]
+[ext_resource type="PackedScene" uid="uid://y5fy5oi8gvbn" path="res://rooms/shadesbattle.tscn" id="2_cosq1"]
+[ext_resource type="PackedScene" uid="uid://c2chliql0cfxg" path="res://hedgie.tscn" id="3_rpein"]
+[ext_resource type="PackedScene" uid="uid://cmpnkssy5eh56" path="res://ram.tscn" id="4_h2is5"]
+[ext_resource type="PackedScene" uid="uid://brber1un3n18r" path="res://clanker.tscn" id="6_0ngfj"]
+
+[node name="Main" type="Node2D" unique_id=1597092461]
+
+[node name="Door" parent="." unique_id=15218995 instance=ExtResource("1_jt8kx")]
+position = Vector2(1143, 498.00006)
+rotation = -0.012470484
+scale = Vector2(0.48000002, 2.3187933)
+scene = ExtResource("2_cosq1")
+
+[node name="Hedgie" parent="." unique_id=1520152085 instance=ExtResource("3_rpein")]
+position = Vector2(129, 510)
+
+[node name="Ram" parent="." unique_id=2102116185 instance=ExtResource("4_h2is5")]
+position = Vector2(861, 94)
+
+[node name="Altman3" parent="." unique_id=1275670187 instance=ExtResource("6_0ngfj")]
+position = Vector2(2209, 501)
+imp = -2000
+health = 2
+
+[node name="Altman4" parent="." unique_id=648982238 instance=ExtResource("6_0ngfj")]
+position = Vector2(5016, 578)
+imp = -2400
+health = 2
+
+[node name="Altman6" parent="." unique_id=1636913377 instance=ExtResource("6_0ngfj")]
+position = Vector2(3226, -596)
+imp = -2400
+health = 2
+
+[node name="Altman5" parent="." unique_id=735654579 instance=ExtResource("6_0ngfj")]
+position = Vector2(-6892, 554)
+imp = -2400
+health = 2

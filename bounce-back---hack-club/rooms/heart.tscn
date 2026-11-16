@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c00ayut031qcp" path="res://door.tscn" id="1_7cogs"]
 [ext_resource type="PackedScene" uid="uid://c2chliql0cfxg" path="res://hedgie.tscn" id="2_f0tcp"]
+[ext_resource type="PackedScene" uid="uid://dqwlsgq611ogh" path="res://rooms/bigfight.tscn" id="2_nuls3"]
 [ext_resource type="PackedScene" uid="uid://otk4vghcdxbl" path="res://altman.tscn" id="4_1trtp"]
 [ext_resource type="PackedScene" uid="uid://ctwfdwh5ljch8" path="res://rooms/heal.tscn" id="4_7cogs"]
 
@@ -10,6 +11,7 @@
 [node name="Door" parent="." unique_id=15218995 instance=ExtResource("1_7cogs")]
 position = Vector2(146, 20)
 rotation = -1.5705872
+scene = ExtResource("2_nuls3")
 
 [node name="Hedgie" parent="." unique_id=1520152085 instance=ExtResource("2_f0tcp")]
 position = Vector2(171, 450)
