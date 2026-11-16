@@ -5,30 +5,37 @@
 [ext_resource type="PackedScene" uid="uid://dpydnptscms0t" path="res://rooms/node_2d.tscn" id="4_njq7y"]
 [ext_resource type="PackedScene" uid="uid://cmpnkssy5eh56" path="res://ram.tscn" id="5_bifwb"]
 [ext_resource type="PackedScene" uid="uid://otk4vghcdxbl" path="res://altman.tscn" id="5_njq7y"]
+[ext_resource type="PackedScene" uid="uid://dip0hiqv34k25" path="res://rooms/arena.tscn" id="6_njq7y"]
 
 [sub_resource type="SystemFont" id="SystemFont_bifwb"]
 
-[node name="Node2D" type="Node2D" unique_id=1815103793]
+[node name="Combat Tutorial" type="Node2D" unique_id=1815103793]
 
 [node name="Ram" parent="." unique_id=2102116185 instance=ExtResource("5_bifwb")]
 position = Vector2(991, 317)
 
 [node name="Hedgie" parent="." unique_id=1520152085 instance=ExtResource("4_hh2kq")]
-position = Vector2(187, 312)
+position = Vector2(336, 356)
 
 [node name="Door" parent="." unique_id=15218995 instance=ExtResource("3_uc15m")]
-position = Vector2(20, 316.00003)
+position = Vector2(16, 316.00003)
 scene = ExtResource("4_njq7y")
+thingy = "watt"
 
 [node name="Altman" parent="." unique_id=1636913377 groups=["Altman"] instance=ExtResource("5_njq7y")]
 position = Vector2(1593, 315)
 
 [node name="Label" type="Label" parent="." unique_id=605937079]
-offset_left = 745.0
-offset_top = 557.0
-offset_right = 1112.0
-offset_bottom = 602.0
+offset_left = 130.0
+offset_top = 51.0
+offset_right = 497.0
+offset_bottom = 96.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("SystemFont_bifwb")
 theme_override_font_sizes/font_size = 32
 text = "x to parry"
+
+[node name="Door2" parent="." unique_id=541985256 instance=ExtResource("3_uc15m")]
+position = Vector2(1159, 298.00003)
+scene = ExtResource("6_njq7y")
+thingy = "wat"
