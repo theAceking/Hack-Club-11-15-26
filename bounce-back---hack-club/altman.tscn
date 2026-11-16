@@ -2,8 +2,45 @@
 
 [ext_resource type="Script" uid="uid://b2gfaycrt7ia5" path="res://rooms/Altman.gd" id="1_lexwf"]
 [ext_resource type="Texture2D" uid="uid://cf4xf045vy7ys" path="res://sonc.png" id="2_7xpeg"]
+[ext_resource type="Texture2D" uid="uid://cxuj56r1acu27" path="res://2.png" id="3_wn8xp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bifwb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnw4m"]
+atlas = ExtResource("3_wn8xp")
+region = Rect2(200, 400, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofr8o"]
+atlas = ExtResource("3_wn8xp")
+region = Rect2(400, 400, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rknr"]
+atlas = ExtResource("3_wn8xp")
+region = Rect2(600, 400, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_srg0u"]
+atlas = ExtResource("3_wn8xp")
+region = Rect2(800, 400, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tr3fu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnw4m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofr8o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rknr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_srg0u")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
 
 [node name="Altman" type="CharacterBody2D" unique_id=1636913377]
 scale = Vector2(0.3, 0.3)
@@ -16,6 +53,7 @@ scale = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_bifwb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=369594357]
+visible = false
 texture = ExtResource("2_7xpeg")
 
 [node name="Health" type="Label" parent="." unique_id=1598208519]
@@ -25,5 +63,14 @@ offset_right = 29.666668
 offset_bottom = -211.66666
 theme_override_font_sizes/font_size = 128
 text = "3"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=716596448]
+position = Vector2(0, 3.3333333)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_tr3fu")
+autoplay = "default"
+frame_progress = 0.027781103
+flip_h = true
+flip_v = true
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cjth28gfwmb0p"]
+
+[ext_resource type="PackedScene" uid="uid://cmpnkssy5eh56" path="res://ram.tscn" id="1_udry7"]
+[ext_resource type="PackedScene" uid="uid://c2chliql0cfxg" path="res://hedgie.tscn" id="2_o2qw7"]
+[ext_resource type="PackedScene" uid="uid://c00ayut031qcp" path="res://door.tscn" id="3_qqdxp"]
+[ext_resource type="PackedScene" uid="uid://dpydnptscms0t" path="res://rooms/node_2d.tscn" id="4_ktgiy"]
+[ext_resource type="PackedScene" uid="uid://otk4vghcdxbl" path="res://altman.tscn" id="5_f7los"]
+[ext_resource type="PackedScene" uid="uid://cj75ab7poeqqs" path="res://rooms/combat_tutorial.tscn" id="6_djkrt"]
+
+[sub_resource type="SystemFont" id="SystemFont_bifwb"]
+
+[node name="Combat Tutorial" type="Node2D" unique_id=1815103793]
+
+[node name="Ram" parent="." unique_id=2102116185 instance=ExtResource("1_udry7")]
+position = Vector2(991, 317)
+
+[node name="Hedgie" parent="." unique_id=1520152085 instance=ExtResource("2_o2qw7")]
+position = Vector2(302, 304)
+
+[node name="Door" parent="." unique_id=15218995 instance=ExtResource("3_qqdxp")]
+position = Vector2(20, 316.00003)
+scene = ExtResource("4_ktgiy")
+thingy = "ff"
+
+[node name="Altman" parent="." unique_id=1636913377 groups=["Altman"] instance=ExtResource("5_f7los")]
+position = Vector2(1463, 50)
+vel = 800
+
+[node name="Altman2" parent="." unique_id=1241200096 groups=["Altman"] instance=ExtResource("5_f7los")]
+position = Vector2(1064, 65)
+vel = 500
+
+[node name="Label" type="Label" parent="." unique_id=605937079]
+offset_left = 475.0
+offset_top = 546.0
+offset_right = 1119.0
+offset_bottom = 591.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_bifwb")
+theme_override_font_sizes/font_size = 32
+text = "successfully parrying resets the cooldown"
+
+[node name="Door2" parent="." unique_id=541985256 instance=ExtResource("3_qqdxp")]
+position = Vector2(1333, 306.00003)
+scene = ExtResource("6_djkrt")
+thingy = "gggg"
