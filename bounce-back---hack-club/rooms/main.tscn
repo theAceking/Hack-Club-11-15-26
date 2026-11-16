@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c2chliql0cfxg" path="res://hedgie.tscn" id="2_0xd5j"]
 [ext_resource type="PackedScene" uid="uid://df7e6mv7sbbji" path="res://rooms/tutorial.tscn" id="2_8svsa"]
 [ext_resource type="PackedScene" uid="uid://cmpnkssy5eh56" path="res://ram.tscn" id="3_w0skf"]
+[ext_resource type="Texture2D" uid="uid://bqgrxsa4fxj64" path="res://rooms/smeggy_1.png" id="5_d22sg"]
 
 [node name="Main" type="Node2D" unique_id=1597092461]
 
@@ -19,3 +20,9 @@ position = Vector2(719, 149)
 
 [node name="Ram2" parent="." unique_id=1884265577 instance=ExtResource("3_w0skf")]
 position = Vector2(874, 428)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1710600173]
+z_index = -69
+position = Vector2(616.125, 336.50003)
+scale = Vector2(1.9248385, 1.4020001)
+texture = ExtResource("5_d22sg")

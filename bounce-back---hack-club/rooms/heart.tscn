@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dqwlsgq611ogh" path="res://rooms/bigfight.tscn" id="2_nuls3"]
 [ext_resource type="PackedScene" uid="uid://otk4vghcdxbl" path="res://altman.tscn" id="4_1trtp"]
 [ext_resource type="PackedScene" uid="uid://ctwfdwh5ljch8" path="res://rooms/heal.tscn" id="4_7cogs"]
+[ext_resource type="Texture2D" uid="uid://bqgrxsa4fxj64" path="res://rooms/smeggy_1.png" id="6_nuls3"]
 
 [node name="Main" type="Node2D" unique_id=1597092461]
 
@@ -23,3 +24,9 @@ imp = -800
 
 [node name="Heart" parent="." unique_id=694583360 instance=ExtResource("4_7cogs")]
 position = Vector2(823, 292)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=962550166]
+z_index = -69
+position = Vector2(616.125, 336.50003)
+scale = Vector2(1.9248385, 1.4020001)
+texture = ExtResource("6_nuls3")

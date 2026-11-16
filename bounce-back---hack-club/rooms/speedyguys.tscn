@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c2chliql0cfxg" path="res://hedgie.tscn" id="3_ifeyt"]
 [ext_resource type="PackedScene" uid="uid://cmpnkssy5eh56" path="res://ram.tscn" id="4_e5375"]
 [ext_resource type="PackedScene" uid="uid://brber1un3n18r" path="res://clanker.tscn" id="6_m1vau"]
+[ext_resource type="Texture2D" uid="uid://bqgrxsa4fxj64" path="res://rooms/smeggy_1.png" id="6_s635m"]
 
 [node name="Main" type="Node2D" unique_id=1597092461]
 
@@ -30,3 +31,9 @@ position = Vector2(7304, 807)
 
 [node name="Altman7" parent="." unique_id=14178024 instance=ExtResource("6_m1vau")]
 position = Vector2(-20487, 594)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=471880456]
+z_index = -69
+position = Vector2(616.125, 336.50003)
+scale = Vector2(1.9248385, 1.4020001)
+texture = ExtResource("6_s635m")

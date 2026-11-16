@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bvs0k0f18ardd" path="res://rooms/finalbattle.tscn" id="2_mk4ha"]
 [ext_resource type="PackedScene" uid="uid://c2chliql0cfxg" path="res://hedgie.tscn" id="3_dy5jb"]
 [ext_resource type="PackedScene" uid="uid://otk4vghcdxbl" path="res://altman.tscn" id="5_idjyn"]
+[ext_resource type="Texture2D" uid="uid://bqgrxsa4fxj64" path="res://rooms/smeggy_1.png" id="6_dxwhn"]
 [ext_resource type="PackedScene" uid="uid://brber1un3n18r" path="res://clanker.tscn" id="6_f33ya"]
 
 [node name="Main" type="Node2D" unique_id=1597092461]
@@ -90,3 +91,9 @@ health = 2
 [node name="Altman14" parent="." unique_id=349596700 instance=ExtResource("6_f33ya")]
 position = Vector2(2522, -3691)
 health = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2082750052]
+z_index = -69
+position = Vector2(616.125, 336.50003)
+scale = Vector2(1.9248385, 1.4020001)
+texture = ExtResource("6_dxwhn")

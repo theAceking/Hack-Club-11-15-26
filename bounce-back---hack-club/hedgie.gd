@@ -75,3 +75,5 @@ func _on_hurtbox_area_area_entered(area: Area2D) -> void:
 		else:
 			Playerstats.health -= 1
 			health_label.text = str(Playerstats.health)
+			if Playerstats.health <= 0:
+				get_tree().quit()

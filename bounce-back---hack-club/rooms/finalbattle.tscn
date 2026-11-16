@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c2chliql0cfxg" path="res://hedgie.tscn" id="3_ctncl"]
 [ext_resource type="Texture2D" uid="uid://c6vkf6evdsjo" path="res://sword.webp" id="5_5jwny"]
 [ext_resource type="PackedScene" uid="uid://cvo2nmtxecfej" path="res://shades.tscn" id="5_f6rem"]
+[ext_resource type="Texture2D" uid="uid://bqgrxsa4fxj64" path="res://rooms/smeggy_1.png" id="6_5jwny"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0fnyg"]
 
@@ -36,3 +37,9 @@ shape = SubResource("CircleShape2D_0fnyg")
 
 [node name="Sprite2D" type="Sprite2D" parent="Sword" unique_id=852982957]
 texture = ExtResource("5_5jwny")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=123488974]
+z_index = -69
+position = Vector2(616.125, 336.50003)
+scale = Vector2(1.9248385, 1.4020001)
+texture = ExtResource("6_5jwny")
