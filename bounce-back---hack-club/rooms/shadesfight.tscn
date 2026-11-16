@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dkgxlmrm81ujf"]
+
+[ext_resource type="PackedScene" uid="uid://c00ayut031qcp" path="res://door.tscn" id="1_38d55"]
+[ext_resource type="PackedScene" uid="uid://c5v0mxj0w1t23" path="res://rooms/speedyguys.tscn" id="2_plry1"]
+[ext_resource type="PackedScene" uid="uid://c2chliql0cfxg" path="res://hedgie.tscn" id="3_gor5c"]
+[ext_resource type="PackedScene" uid="uid://cmpnkssy5eh56" path="res://ram.tscn" id="4_rxece"]
+[ext_resource type="PackedScene" uid="uid://cvo2nmtxecfej" path="res://shades.tscn" id="5_8yekg"]
+
+[node name="Main" type="Node2D" unique_id=1597092461]
+
+[node name="Door" parent="." unique_id=15218995 instance=ExtResource("1_38d55")]
+position = Vector2(145, 17.000002)
+rotation = -1.564117
+scene = ExtResource("2_plry1")
+
+[node name="Hedgie" parent="." unique_id=1520152085 instance=ExtResource("3_gor5c")]
+position = Vector2(129, 510)
+
+[node name="Ram" parent="." unique_id=2102116185 instance=ExtResource("4_rxece")]
+position = Vector2(658, 279)
+
+[node name="Altman" parent="." unique_id=1636913377 instance=ExtResource("5_8yekg")]
+position = Vector2(886, -500)

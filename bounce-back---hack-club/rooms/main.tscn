@@ -11,9 +11,6 @@
 position = Vector2(1131, 289.00003)
 scene = ExtResource("2_8svsa")
 
-[node name="Door" parent="Door" unique_id=28436447 instance=ExtResource("1_x4obk")]
-position = Vector2(1131, 289.00003)
-
 [node name="Hedgie" parent="." unique_id=1520152085 instance=ExtResource("2_0xd5j")]
 position = Vector2(157, 268)
 
