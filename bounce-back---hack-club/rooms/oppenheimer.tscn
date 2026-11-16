@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://br3qi0gc5adi2"]
+
+[ext_resource type="Script" uid="uid://yh1bf13txkwt" path="res://rooms/oppenheimer.gd" id="1_2jqvo"]
+[ext_resource type="PackedScene" uid="uid://c2chliql0cfxg" path="res://hedgie.tscn" id="3_128m8"]
+
+[node name="Main" type="Node2D" unique_id=1597092461]
+script = ExtResource("1_2jqvo")
+
+[node name="Hedgie" parent="." unique_id=1520152085 instance=ExtResource("3_128m8")]
+position = Vector2(129, 510)
+
+[node name="Label" type="Label" parent="." unique_id=1787020985]
+offset_left = 24.0
+offset_top = 208.0
+offset_right = 1238.0
+offset_bottom = 326.0
+theme_override_font_sizes/font_size = 32
+text = "You got all 40 ram sticks........ "
+metadata/_edit_use_anchors_ = true

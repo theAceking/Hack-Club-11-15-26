@@ -31,14 +31,6 @@ position = Vector2(16153, -3403)
 position = Vector2(-14610, 5547)
 vel = 700
 
-[node name="Altman4" parent="Altman4" unique_id=1730127694 instance=ExtResource("5_idjyn")]
-position = Vector2(23956.664, -26796.664)
-vel = 700
-
-[node name="Altman8" parent="Altman4" unique_id=460676658 instance=ExtResource("5_idjyn")]
-position = Vector2(32535.002, -22514.33)
-vel = 700
-
 [node name="Altman17" parent="." unique_id=506216957 instance=ExtResource("5_idjyn")]
 position = Vector2(8821, 6448)
 vel = 700

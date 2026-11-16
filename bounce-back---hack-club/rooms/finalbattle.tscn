@@ -1,32 +1,38 @@
 [gd_scene format=3 uid="uid://bvs0k0f18ardd"]
 
 [ext_resource type="PackedScene" uid="uid://c00ayut031qcp" path="res://door.tscn" id="1_5jwny"]
-[ext_resource type="PackedScene" uid="uid://c5v0mxj0w1t23" path="res://rooms/speedyguys.tscn" id="2_0fnyg"]
+[ext_resource type="PackedScene" uid="uid://br3qi0gc5adi2" path="res://rooms/oppenheimer.tscn" id="2_f6rem"]
 [ext_resource type="PackedScene" uid="uid://c2chliql0cfxg" path="res://hedgie.tscn" id="3_ctncl"]
-[ext_resource type="PackedScene" uid="uid://cmpnkssy5eh56" path="res://ram.tscn" id="4_680av"]
-[ext_resource type="PackedScene" uid="uid://otk4vghcdxbl" path="res://altman.tscn" id="5_g5afd"]
-[ext_resource type="PackedScene" uid="uid://brber1un3n18r" path="res://clanker.tscn" id="6_se36j"]
+[ext_resource type="Texture2D" uid="uid://c6vkf6evdsjo" path="res://sword.webp" id="5_5jwny"]
+[ext_resource type="PackedScene" uid="uid://cvo2nmtxecfej" path="res://shades.tscn" id="5_f6rem"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0fnyg"]
 
 [node name="Main" type="Node2D" unique_id=1597092461]
 
 [node name="Door" parent="." unique_id=15218995 instance=ExtResource("1_5jwny")]
-position = Vector2(145, 17.000002)
+position = Vector2(633, -4)
 rotation = -1.564117
-scene = ExtResource("2_0fnyg")
+scene = ExtResource("2_f6rem")
 
 [node name="Hedgie" parent="." unique_id=1520152085 instance=ExtResource("3_ctncl")]
 position = Vector2(129, 510)
 
-[node name="Ram" parent="." unique_id=2102116185 instance=ExtResource("4_680av")]
-position = Vector2(658, 279)
+[node name="Altman" parent="." unique_id=1636913377 instance=ExtResource("5_f6rem")]
+position = Vector2(886, -500)
 
-[node name="Altman" parent="." unique_id=1636913377 instance=ExtResource("5_g5afd")]
-position = Vector2(1624, 278)
-vel = 700
+[node name="Altman2" parent="." unique_id=1918335381 instance=ExtResource("5_f6rem")]
+position = Vector2(2501, 2794)
 
-[node name="Altman2" parent="." unique_id=1948013782 instance=ExtResource("5_g5afd")]
-position = Vector2(-445, -106)
-vel = 700
+[node name="Altman3" parent="." unique_id=1394017690 instance=ExtResource("5_f6rem")]
+position = Vector2(-5206, 2563)
 
-[node name="Altman3" parent="." unique_id=1050746816 instance=ExtResource("6_se36j")]
-position = Vector2(1680, 594)
+[node name="Sword" type="Area2D" parent="." unique_id=1368783904 groups=["DamageUpgrade"]]
+position = Vector2(1058, 89.000015)
+scale = Vector2(0.2, 0.2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sword" unique_id=1293072728 groups=["DamageUpgrade"]]
+shape = SubResource("CircleShape2D_0fnyg")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sword" unique_id=852982957]
+texture = ExtResource("5_5jwny")
