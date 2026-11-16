@@ -35,6 +35,8 @@ Altman=""
 Door=""
 Sonc=""
 Heal=""
+Dmg=""
+DamageUpgrade=""
 
 [input]
 

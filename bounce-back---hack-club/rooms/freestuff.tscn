@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ybmk405es8ki"]
+
+[ext_resource type="PackedScene" uid="uid://c00ayut031qcp" path="res://door.tscn" id="1_fgcym"]
+[ext_resource type="PackedScene" uid="uid://cbgkmbbcous6q" path="res://rooms/war.tscn" id="2_07vbt"]
+[ext_resource type="PackedScene" uid="uid://c2chliql0cfxg" path="res://hedgie.tscn" id="3_xgulu"]
+[ext_resource type="PackedScene" uid="uid://ctwfdwh5ljch8" path="res://rooms/heal.tscn" id="4_thjip"]
+[ext_resource type="Texture2D" uid="uid://c6vkf6evdsjo" path="res://sword.webp" id="5_07vbt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tr3fu"]
+
+[node name="Main" type="Node2D" unique_id=1597092461]
+
+[node name="Door" parent="." unique_id=15218995 instance=ExtResource("1_fgcym")]
+position = Vector2(1003, 28)
+rotation = -1.564117
+scene = ExtResource("2_07vbt")
+
+[node name="Hedgie" parent="." unique_id=1520152085 instance=ExtResource("3_xgulu")]
+position = Vector2(129, 510)
+
+[node name="Heart" parent="." unique_id=694583360 instance=ExtResource("4_thjip")]
+position = Vector2(232.99998, 177.99998)
+
+[node name="Heart2" parent="." unique_id=1429870411 instance=ExtResource("4_thjip")]
+position = Vector2(940.99994, 240)
+
+[node name="Sword" type="Area2D" parent="." unique_id=941567354 groups=["DamageUpgrade"]]
+position = Vector2(595, 303)
+scale = Vector2(0.2, 0.2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sword" unique_id=6223574 groups=["DamageUpgrade"]]
+shape = SubResource("CircleShape2D_tr3fu")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sword" unique_id=638156808]
+texture = ExtResource("5_07vbt")

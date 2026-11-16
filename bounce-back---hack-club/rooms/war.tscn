@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://cbgkmbbcous6q"]
+
+[ext_resource type="PackedScene" uid="uid://c00ayut031qcp" path="res://door.tscn" id="1_dxwhn"]
+[ext_resource type="PackedScene" uid="uid://bvs0k0f18ardd" path="res://rooms/finalbattle.tscn" id="2_mk4ha"]
+[ext_resource type="PackedScene" uid="uid://c2chliql0cfxg" path="res://hedgie.tscn" id="3_dy5jb"]
+[ext_resource type="PackedScene" uid="uid://otk4vghcdxbl" path="res://altman.tscn" id="5_idjyn"]
+[ext_resource type="PackedScene" uid="uid://brber1un3n18r" path="res://clanker.tscn" id="6_f33ya"]
+
+[node name="Main" type="Node2D" unique_id=1597092461]
+
+[node name="Door" parent="." unique_id=15218995 instance=ExtResource("1_dxwhn")]
+position = Vector2(145, 17.000002)
+rotation = -1.564117
+scene = ExtResource("2_mk4ha")
+
+[node name="Hedgie" parent="." unique_id=1520152085 instance=ExtResource("3_dy5jb")]
+position = Vector2(129, 510)
+
+[node name="Altman" parent="." unique_id=1636913377 instance=ExtResource("5_idjyn")]
+position = Vector2(2353, -1609)
+vel = 700
+
+[node name="Altman2" parent="." unique_id=1948013782 instance=ExtResource("5_idjyn")]
+position = Vector2(-3947, -5142)
+vel = 700
+
+[node name="Altman3" parent="." unique_id=1050746816 instance=ExtResource("6_f33ya")]
+position = Vector2(16153, -3403)
+
+[node name="Altman4" parent="." unique_id=2037947797 instance=ExtResource("5_idjyn")]
+position = Vector2(-14610, 5547)
+vel = 700
+
+[node name="Altman4" parent="Altman4" unique_id=1730127694 instance=ExtResource("5_idjyn")]
+position = Vector2(23956.664, -26796.664)
+vel = 700
+
+[node name="Altman8" parent="Altman4" unique_id=460676658 instance=ExtResource("5_idjyn")]
+position = Vector2(32535.002, -22514.33)
+vel = 700
+
+[node name="Altman17" parent="." unique_id=506216957 instance=ExtResource("5_idjyn")]
+position = Vector2(8821, 6448)
+vel = 700
+
+[node name="Altman18" parent="." unique_id=1891564978 instance=ExtResource("5_idjyn")]
+position = Vector2(4781, 4234)
+vel = 700
+
+[node name="Altman5" parent="." unique_id=1648700580 instance=ExtResource("5_idjyn")]
+position = Vector2(-7406, 1429)
+vel = 700
+
+[node name="Altman6" parent="." unique_id=126922586 instance=ExtResource("6_f33ya")]
+position = Vector2(6218, 1374)
+health = 2
+
+[node name="Altman7" parent="." unique_id=301027238 instance=ExtResource("5_idjyn")]
+position = Vector2(-1168, 9203)
+vel = 700
+
+[node name="Altman19" parent="." unique_id=210968662 instance=ExtResource("5_idjyn")]
+position = Vector2(932, 7574)
+vel = 700
+
+[node name="Altman8" parent="." unique_id=1384398526 instance=ExtResource("5_idjyn")]
+position = Vector2(-9855, 7506)
+vel = 700
+
+[node name="Altman9" parent="." unique_id=51550107 instance=ExtResource("6_f33ya")]
+position = Vector2(14508, 11466)
+health = 2
+
+[node name="Altman10" parent="." unique_id=2075551412 instance=ExtResource("6_f33ya")]
+position = Vector2(1754, 812)
+health = 2
+
+[node name="Altman11" parent="." unique_id=1885020288 instance=ExtResource("6_f33ya")]
+position = Vector2(79, 1392)
+health = 2
+
+[node name="Altman12" parent="." unique_id=1780864405 instance=ExtResource("6_f33ya")]
+position = Vector2(-3469, 872)
+health = 2
+
+[node name="Altman15" parent="." unique_id=262155945 instance=ExtResource("5_idjyn")]
+position = Vector2(-16203, -5751)
+vel = 700
+
+[node name="Altman16" parent="." unique_id=342611825 instance=ExtResource("6_f33ya")]
+position = Vector2(-12266, -6308)
+health = 2
+
+[node name="Altman13" parent="." unique_id=864364360 instance=ExtResource("6_f33ya")]
+position = Vector2(-2658, -1735)
+health = 2
+
+[node name="Altman14" parent="." unique_id=349596700 instance=ExtResource("6_f33ya")]
+position = Vector2(2522, -3691)
+health = 2

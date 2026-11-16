@@ -41,6 +41,9 @@ func _on_pickup_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Heal"):
 		Playerstats.health += 5
 		area.queue_free()
+	if area.is_in_group("DamageUpgrade"):
+		Playerstats.damage += 1
+		area.queue_free()
 		
 
 func _unhandled_input(event):
@@ -64,7 +67,7 @@ func _on_hurtbox_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Altman"):
 		if parrying:
 			print('lollllz')
-			area.get_parent().health -= 1
+			area.get_parent().health -= Playerstats.damage
 			parry_time = 0
 			print(area.get_parent().health)
 		else:
