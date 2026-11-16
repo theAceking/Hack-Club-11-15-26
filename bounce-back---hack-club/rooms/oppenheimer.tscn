@@ -15,7 +15,7 @@ offset_left = 24.0
 offset_top = 208.0
 offset_right = 1238.0
 offset_bottom = 326.0
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 30
 text = "You got all 40 ram sticks........ "
 metadata/_edit_use_anchors_ = true
 

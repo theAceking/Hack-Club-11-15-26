@@ -31,6 +31,7 @@ vel = 700
 
 [node name="Altman3" parent="." unique_id=1050746816 instance=ExtResource("6_jj6fm")]
 position = Vector2(1680, 594)
+health = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1077782203]
 z_index = -69
